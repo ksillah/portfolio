@@ -172,7 +172,7 @@ export const Projects = ( props:Props) => {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <a style={{textDecoration:'none'}} href="https://tv-inventory.herokuapp.com/">
+                    <a style={{textDecoration:'none'}} href="https://tv-rating-inventory.web.app/">
                     <   Button className={classes.github_button} size="large">TV Inventory App on Firebase</Button>
                     </a>
                 </CardActions>
