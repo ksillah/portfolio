@@ -31,6 +31,7 @@ const drawerWidth = 240;
 const useStyles = makeStyles( (theme:Theme) =>
 createStyles({
     
+    
     navbar_container: {
         display: 'flex',
         justifyContent: 'space-between',
@@ -68,7 +69,7 @@ createStyles({
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
-        position: 'absolute',
+        backgroundAttachment: 'fixed',
         
     },
     row:{
@@ -102,7 +103,10 @@ createStyles({
       },
       root:{
         padding: '0',
-        margin: '0'
+        margin: '0',
+        overflow: 'hidden',
+        height: '100%',
+        width: '100%',
     },
     github_button:{
         borderColor:'white',
@@ -128,7 +132,7 @@ export const Projects = ( props:Props) => {
     const classes = useStyles();
 
     return (
-        <div className={classes.root}>
+        <div className={classes.root} >
         {/*New and Updated HTML Code */}
         <nav>
             <div className={classes.navbar_container}>
@@ -147,66 +151,83 @@ export const Projects = ( props:Props) => {
         </nav>
         <main className={classes.main}>
             <div className={classes.row}>
-            <Card className={classes.card_root} variant="outlined">
-                <CardContent>
-                    <Typography className={classes.title} color="textSecondary" gutterBottom>
-                    Flask
-                    </Typography>
-                    <Typography variant="h5" component="h2">
-                    An application that allows a user to sign up, log in and create a rating for shows they have viewed.
-                    </Typography>
-                </CardContent>
-                <CardActions>
-                    <a style={{textDecoration:'none'}} href="https://tv-inventory.herokuapp.com/">
-                    <   Button className={classes.github_button} size="large">TV Inventory App on Heroku</Button>
-                    </a>
-                </CardActions>
-            </Card>
-            <Card className={classes.card_root} variant="outlined">
-                <CardContent>
-                    <Typography className={classes.title} color="textSecondary" gutterBottom>
-                    React
-                    </Typography>
-                    <Typography variant="h5" component="h2">
-                    An application that allows a user to sign up, log in, create and view ratings for shows they have viewed. 
-                    </Typography>
-                </CardContent>
-                <CardActions>
-                    <a style={{textDecoration:'none'}} href="https://tv-rating-inventory.web.app/">
-                    <   Button className={classes.github_button} size="large">TV Inventory App on Firebase</Button>
-                    </a>
-                </CardActions>
-            </Card>
+                <Card className={classes.card_root} variant="outlined">
+                    <CardContent>
+                        <Typography className={classes.title} color="textSecondary" gutterBottom>
+                        Flask
+                        </Typography>
+                        <Typography variant="h5" component="h2">
+                        An application that allows a user to sign up, log in and create a rating for shows they have viewed.
+                        </Typography>
+                    </CardContent>
+                    <CardActions>
+                        <a style={{textDecoration:'none'}} href="https://tv-inventory.herokuapp.com/">
+                        <   Button className={classes.github_button} size="large">TV Inventory App on Heroku</Button>
+                        </a>
+                    </CardActions>
+                </Card>
+            
+                <Card className={classes.card_root} variant="outlined">
+                    <CardContent>
+                        <Typography className={classes.title} color="textSecondary" gutterBottom>
+                        React
+                        </Typography>
+                        <Typography variant="h5" component="h2">
+                        An application that allows a user to sign up, log in, create and view ratings for shows they have viewed. 
+                        </Typography>
+                    </CardContent>
+                    <CardActions>
+                        <a style={{textDecoration:'none'}} href="https://tv-rating-inventory.web.app/">
+                        <   Button className={classes.github_button} size="large">TV Inventory App on Firebase</Button>
+                        </a>
+                    </CardActions>
+                </Card>
+            </div>
+            <div className={classes.row}> 
+                <Card className={classes.card_root} variant="outlined">
+                    <CardContent>
+                        <Typography className={classes.title} color="textSecondary" gutterBottom>
+                        JavaScrpt
+                        </Typography>
+                        <Typography variant="h5" component="h2">
+                        A website that generates the FIA Formula One World Championship standings.
+                        </Typography>
+                    </CardContent>
+                    <CardActions>
+                        <a style={{textDecoration:'none'}} href="https://fiastandings.netlify.app/">
+                        <   Button className={classes.github_button} size="large">FIA Formula One World Championship Standings</Button>
+                        </a>
+                    </CardActions>
+                </Card>
             </div>
             <div className={classes.row}>
-            <Card className={classes.card_root} variant="outlined">
-            <CardContent>
-                <Typography className={classes.title} color="textSecondary" gutterBottom>
-                LinkedIn
-                </Typography>
-                
-            </CardContent>
-            <CardActions>
-                <a style={{textDecoration:'none'}} href="https://www.linkedin.com/in/kutah-sillah/">
-                <   Button className={classes.github_button} size="large">Let's Connect on LinkedIn</Button>
-                </a>
-            </CardActions>
-    </Card>
-    <Card className={classes.card_root} variant="outlined">
-            <CardContent>
-                <Typography className={classes.title} color="textSecondary" gutterBottom>
-                GitHub
-                </Typography>
-                
-            </CardContent>
-            <CardActions  >
-                <a style={{textDecoration:'none'}}  href="https://github.com/ksillah">
-                <   Button className={classes.github_button} size="large">View All My Public Projects Here!</Button>
-                </a>
-            </CardActions>
-    </Card>
+                <Card className={classes.card_root} variant="outlined">
+                <CardContent>
+                    <Typography className={classes.title} color="textSecondary" gutterBottom>
+                    LinkedIn
+                    </Typography>
+                    
+                </CardContent>
+                <CardActions>
+                    <a style={{textDecoration:'none'}} href="https://www.linkedin.com/in/kutah-sillah/">
+                    <   Button className={classes.github_button} size="large">Let's Connect on LinkedIn</Button>
+                    </a>
+                </CardActions>
+                </Card>
+                <Card className={classes.card_root} variant="outlined">
+                <CardContent>
+                    <Typography className={classes.title} color="textSecondary" gutterBottom>
+                    GitHub
+                    </Typography>
+                    
+                </CardContent>
+                <CardActions  >
+                    <a style={{textDecoration:'none'}}  href="https://github.com/ksillah">
+                    <   Button className={classes.github_button} size="large">View All My Public Projects Here!</Button>
+                    </a>
+                </CardActions>
+                </Card>
             </div>
-           
         </main>
     </div>
 )
